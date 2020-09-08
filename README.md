@@ -12,37 +12,22 @@ Este projeto tem como objetivo simular um desafio real pedido por uma empresa. P
 * Usar algoritmo de ML capaz de prever as vendas das próximas 6 semanas;
 * Fazer deploy do modelo de ML de forma que qualquer pessoa possa acessar as vendas das lojas;
 
-## Pipeline
+## Detalhes do Pipeline
 
-1. Análise descritiva dos dados
-2. Preenchimento de NANs
-..* Distância de competidores (competition_distance): foi suposto que a competição fica muito distance, logo substituido por 200000;
-..* Data de abertura dos competitodes (competition_open_since_month e competition_open_since_year): foi suposto que a competição foi fundada há muito tempo, logo substituido pela data 01/1900;
-..* Início da promoção 2 (promo2): foi suposto que a promo 2 terá início em 01/2018 (no futuro);
-3. Estatística des
-
-0.0. Imports
-0.1. Helper Functions
-0.2. Loading data
-1.0. PASSO 01 - DESCRICAO DOS DADOS
-1.1. Rename Columns
-1.2. Data Dimensions
-1.3. Data Types
-1.4. Check NA
-1.5. Fillout NA
-1.6. Change Data Types
-1.7. Descriptive Statistics
-1.7.1. Numerical Atributes
-1.7.2. Categorical Atributes
-2.0. PASSO 02 - FEATURE ENGINEERING
-2.1. Mapa Mental de Hipoteses
-2.2. Criacao das Hipoteses
-2.2.1. Hipoteses Loja
-2.2.2. Hipoteses Produto
-2.2.3. Hipoteses Tempo
-2.3. Lista Final de Hipóteses
-2.4. Feature Engineering
-3.0. PASSO 03 - FILTRAGEM DE VARIÁVEIS
+1. DESCRICAO DOS DADOS
+* Preenchimento de NANs
+  * Distância de competidores (competition_distance): foi suposto que a competição fica muito distance, logo substituido por 200000;
+  * Data de abertura dos competitodes (competition_open_since_month e competition_open_since_year): foi suposto que a competição foi fundada há muito tempo, logo substituido pela data 01/1900;
+  * Início da promoção 2 (promo2): foi suposto que a promo 2 terá início em 01/2018 (no futuro);
+* Estatística descritiva dos dados numéricos e categóricos
+1. FEATURE ENGINEERING
+* Criação de hipóteses
+** Nesta etapa foi criado um mapa mental de hipóteses sobre o negócio;
+** Utilização de gráficos para 
+   1. Criacao das Hipoteses
+   1. Lista Final de Hipóteses
+   1. Feature Engineering
+1. PASSO 03 - FILTRAGEM DE VARIÁVEIS
 3.1. Filtragem das Linhas
 3.2. Selecao das Colunas
 4.0. PASSO 04 - ANALISE EXPLORATORIA DOS DADOS
