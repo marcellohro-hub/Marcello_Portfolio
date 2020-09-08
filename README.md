@@ -2,6 +2,7 @@
 
 # Projeto 1
 Este projeto tem como objetivo simular um desafio real pedido por uma empresa. Para isso utilizei como base os dados da loja Rossmann do desafio [kaggle](https://www.kaggle.com/c/rossmann-store-sales). 
+No final foi feito o deploy do modelo no Heroku;
 
 ## Contexto
 * Reunião mensal de resultados para definição de orçamento;
@@ -12,81 +13,58 @@ Este projeto tem como objetivo simular um desafio real pedido por uma empresa. P
 * Usar algoritmo de ML capaz de prever as vendas das próximas 6 semanas;
 * Fazer deploy do modelo de ML de forma que qualquer pessoa possa acessar as vendas das lojas;
 
-## Detalhes do Pipeline
+## Pipeline
+
+Os detalhes mais importantes do Pipeline estão no próprio notebook (como gráfico, tabelas e desempenho de modelos).
 
 1. DESCRICAO DOS DADOS
 * Preenchimento de NANs
   * Distância de competidores (competition_distance): foi suposto que a competição fica muito distance, logo substituido por 200000;
   * Data de abertura dos competitodes (competition_open_since_month e competition_open_since_year): foi suposto que a competição foi fundada há muito tempo, logo substituido pela data 01/1900;
   * Início da promoção 2 (promo2): foi suposto que a promo 2 terá início em 01/2018 (no futuro);
-* Estatística descritiva dos dados numéricos e categóricos
-1. FEATURE ENGINEERING
-* Criação de hipóteses
-** Nesta etapa foi criado um mapa mental de hipóteses sobre o negócio;
-** Utilização de gráficos para 
-   1. Criacao das Hipoteses
-   1. Lista Final de Hipóteses
-   1. Feature Engineering
-1. PASSO 03 - FILTRAGEM DE VARIÁVEIS
-3.1. Filtragem das Linhas
-3.2. Selecao das Colunas
-4.0. PASSO 04 - ANALISE EXPLORATORIA DOS DADOS
-4.1. Analise Univariada
-4.1.1. Response Variable
-4.1.2. Numerical Variable
-4.1.3. Categorical Variable
-4.2. Analise Bivariada
-H1. Lojas com maior sortimentos deveriam vender mais.
-H2. Lojas com competidores mais próximos deveriam vender menos.
-H3. Lojas com competidores à mais tempo deveriam vendem mais.
-H4. Lojas com promoções ativas por mais tempo deveriam vender mais.
-H5. Lojas com mais dias de promoção deveriam vender mais.
-H7. Lojas com mais promoções consecutivas deveriam vender mais.
-H8. Lojas abertas durante o feriado de Natal deveriam vender mais.
-H9. Lojas deveriam vender mais ao longo dos anos.
-H10. Lojas deveriam vender mais no segundo semestre do ano.
-H11. Lojas deveriam vender mais depois do dia 10 de cada mês.
-H12. Lojas deveriam vender menos aos finais de semana.
-H13. Lojas deveriam vender menos durante os feriados escolares.
-4.2.1. Resumo das Hipoteses
-4.3. Analise Multivariada
-4.3.1. Numerical Attributes
-4.3.2. Categorical Attributes
-5.0. PASSO 05 - DATA PREPARATION
-5.1. Normalizacao
-5.2. Rescaling
-5.3. Transformacao
-5.3.1. Encoding
-5.3.2. Response Variable Transformation
-5.3.3. Nature Transformation
-6.0. PASSO 06 - FEATURE SELECTION
-6.1. Split dataframe into training and test dataset
-6.2. Boruta as Feature Selector
-6.2.1. Best Features from Boruta
-6.3. Manual Feature Selection
-7.0. PASSO 07 - MACHINE LEARNING MODELLING
-7.1. Average Model
-7.2. Linear Regression Model
-7.2.1. Linear Regression Model - Cross Validation
-7.3. Linear Regression Regularized Model - Lasso
-7.3.1. Lasso - Cross Validation
-7.4. Random Forest Regressor
-7.4.1. Random Forest Regressor - Cross Validation
-7.5. XGBoost Regressor
-7.5.1. XGBoost Regressor - Cross Validation
-7.6. Compare Model's Performance
-7.6.1. Single Performance
-7.6.2. Real Performance - Cross Validation
-8.0. PASSO 08 - HYPERPARAMETER FINE TUNING
-8.1. Random Search
-8.2. Final Model
-9.0. PASSO 09 - TRADUCAO E INTERPRETACAO DO ERRO
-9.1. Business Performance
-9.2. Total Performance
-9.3. Machine Learning Performance
+* Estatística descritiva dos dados numéricos e categóricos;
+2. FEATURE ENGINEERING
+* Criação de hipóteses por meio de um mapa mental;
+* Criação das colunas:
+  * is_promo2: 1 se loja participa da promo2 e 0 se não;
+  * competition_time_month: tempo que a competição existe em meses
+  * promo2_time_week: tempo que há a promo 2 em semanas;
+  * assortment: apenas traduz o tipo de assortment
+  * state_holiday: faz o mesmo para os feriados
+3. FILTRAGEM DE VARIÁVEIS
+4. ANALISE EXPLORATORIA DOS DADOS
+* Análise univariada, bivariada e multivariada dos dados numéricos e categóricos;
+* Alguns insights interessantes foram gerados nessa etapa como (detalhes no notebook):
+  * Lojas com COMPETIDORES MAIS PROXIMOS vendem MAIS.
+  * Lojas com COMPETIDORES À MAIS TEMPO vendem MENOS.
+  * Lojas com promocoes ativas por mais tempo vendem menos, depois de um certo periodo de
+  promocao
+  * Lojas vendem menos ao longo dos anos
+5. DATA PREPARATION
+* Etapa de preparação de dados com rescaling e transformação;
+* Nesta etapa as instâncias de scale são salvas como pickle para posterior utilização no deploy do modelo;
+6. FEATURE SELECTION
+* Esta etapa tem como objetivo escolher os melhores features para o treinamento do modelo;
+* Para isso é preciso separar os dados de treinamento e teste para cross-validation;
+* Foi usado o método Boruta para filtragem das features com maior relevância;
+7. MACHINE LEARNING MODELLING
+* Utilizando Cross-Validation, foi avaliado qual o melhor método de ML para treinamento do modelo;
+* Média de vendas foi utilizado como Baseline;
+* Random Forest tem o melhor desempenho, com XGBoost com um desempenho bem próximo;
+* Devido ao alto custo computacional de Random Forest, foi escolhido o XGBoost;
+8. HYPERPARAMETER FINE TUNING
+* Etapa de Fine Tuning do modelo XGBoost, utilizando o método Random Search;
+9. TRADUCAO E INTERPRETACAO DO ERRO
+* Tradução do erro do modelo em desempenho para o negócio;
+* Apresentação de *best case scenario* e *worst case scenario*;
 10.0. PASSO 10 - DEPLOY MODEL TO PRODUCTION
-10.1. Train model for deployment
-10.2. Rossmann Class
-10.3. Testing Rossman Class on a Kaggle submission
-10.4. API Handler
-10.5. API Tester
+* Treinamento do modelo utilizando todo o dado de treinamento. O modelo é salvo como pickle para deploy;
+* Construção de uma classe chamada Rossmann para deploy;
+* Apesar de não ser o principal objetivo, fiz a submissão no Kaggle com resultado de **0.18594 (RMS)**;
+* Deploy do modelo no Heroku;
+* Construção e teste da API em Flask no notebook;
+
+## Front End da API
+
+Por último construí uma melhor Front End para a aplicação em flask, dessa forma mesmo quem não é da área técnica poderia acessar a previsão de vendas totais das lojas. Não sou especialista em flask e nem em HTML, o front end é bem minimalista.
+Link da API.
