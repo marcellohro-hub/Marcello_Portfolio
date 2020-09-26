@@ -13,3 +13,12 @@ No próprio notebook o pipeline está bem claro e organizado, passando por featu
 | ![](https://github.com/marcellohro-hub/Rossman_challange/blob/master/img/whole_scenario.JPG) | 
 |:--:| 
 | *Previsão de vendas* |
+
+# [Projeto 2](https://github.com/marcellohro-hub/Linkedin_scraping-and-analysis)
+Este é um projeto de insight com o objetivo de analisar o mercado de engenharia mecânica (minha área original de formação). Fiz um web-scraping de 600 vagas de eng mecanica do linkedin, extraindo todos os textos das vagas (post, industry, applicants, description, etc). Com isso fiz análises estatísticas no pandas e utilizando a bilioteca spaCy de NLP. Pude extrair vários dados muito interessantes como por exemplo as habilidades com mais demanda:
+ 
+| ![](https://github.com/marcellohro-hub/Linkedin_scraping-and-analysis/blob/master/img/habilidades.png) | 
+|:--:| 
+| *Habilidades x Número de vagas que pedem tal habilidade* |
+
+Outras correlações envolvendo local, salário, indústria, palavras-chave do post, etc, estão na própria análise do notebook.
