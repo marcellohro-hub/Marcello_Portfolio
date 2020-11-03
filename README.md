@@ -22,3 +22,7 @@ Este é um projeto de insight com o objetivo de analisar o mercado de engenharia
 | *Habilidades x Número de vagas que pedem tal habilidade* |
 
 Outras correlações envolvendo local, salário, indústria, palavras-chave do post, etc, estão na própria análise do notebook.
+
+# [Projeto 3](https://github.com/marcellohro-hub/Fraud_detection)
+
+Projeto sobre fraude de [cartão de crédito](https://www.kaggle.com/ntnu-testimon/paysim1)
