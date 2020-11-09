@@ -19,6 +19,10 @@ Este é um projeto de insight com o objetivo de analisar o mercado de engenharia
 
 Outras correlações envolvendo local, salário, indústria, palavras-chave do post, etc, estão na própria análise do notebook.
 
+Atualização:
+
+Este projeto foi muito bem recebido quando publiquei no linkedin, um colega da minha rede de conexões se interessou e propos desenvolver um [Guia de Profissões](http://tudosobrecarreira.com.br/guiadeprofissoes/) direcionado para alunos do Ensino Médio que ainda não decidiram o que fazer no vestibular.
+
 # [Projeto 3](https://github.com/marcellohro-hub/Fraud_detection)
 
 Projeto desafio sobre [fraude de cartão de crédito](https://www.kaggle.com/ntnu-testimon/paysim1) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) do kaggle. Neste projeto pude testar várias técnicas de balanceamento e modelos de Machine Learning. Surpreendentemente não houve diferença significativa entre o resultado com os dados balanceados e não-balanceados. Em termos de acurácia obtive o seguinte resultado com o modelo final:
