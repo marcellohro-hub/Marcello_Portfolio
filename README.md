@@ -25,10 +25,10 @@ Outras correlações envolvendo local, salário, indústria, palavras-chave do p
 
 # [Projeto 3](https://github.com/marcellohro-hub/Fraud_detection)
 
-Projeto desafio sobre [fraude de cartão de crédito](https://www.kaggle.com/ntnu-testimon/paysim1) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection]https://www.kaggle.com/ntnu-testimon/paysim1 do kaggle. Neste projeto pude testar várias técnicas de balanceamento e modelos de Machine Learning. Surpreendentemente não houve muita diferença significativa entre o resultado com os dados balanceados e não-balanceados. Em termos de acurácia obtive o seguinte resultado com o modelo final:
+Projeto desafio sobre [fraude de cartão de crédito](https://www.kaggle.com/ntnu-testimon/paysim1) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) do kaggle. Neste projeto pude testar várias técnicas de balanceamento e modelos de Machine Learning. Surpreendentemente não houve diferença significativa entre o resultado com os dados balanceados e não-balanceados. Em termos de acurácia obtive o seguinte resultado com o modelo final:
 
 * Balanced Accuracy: 0.998765
 * F1Score: 0.998764
 * KappaScore: 0.998762
 
-Encontre mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
+Mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
