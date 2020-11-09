@@ -4,7 +4,7 @@
 Este é o projeto final do curso [DS_em_produção](https://datascienceemproducao.kpages.online/como-ser-um-data-scientist?ref=Q40443728O&gclid=CjwKCAiAnIT9BRAmEiwANaoE1eyf2FNWx6xBsxDHqL6oIiIMX4y0Vthvov9dqodrmUdyJc2XvnkZDBoCcxQQAvD_BwE). Tem como objetivo simular um desafio real pedido por uma empresa. Para isso utilizei como base os dados da loja Rossmann do desafio [kaggle](https://www.kaggle.com/c/rossmann-store-sales). No final fiz o deploy do modelo no [Heroku](https://rossmann1-model.herokuapp.com/).
 
 Os dados fornecidos são basicamente uma TimeSeries dos dias mostrando as vendas bem como status de promoções e feriados, e uma outra planilha de dados gerais das lojas.
-No próprio notebook o pipeline está bem claro e organizado, passando por featuring engineering, data cleaning, data preparation, etc. Na fase de seleção de variáveis utilizei o método Boruta. Para avaliar o melhor modelo utilizei cross-validation, e no final escolhi o XGBoost. A previsão do modelo foi traduzida em desempenho de negócio.
+No próprio notebook o pipeline está bem claro e organizado, passando por featuring engineering, data cleaning, data preparation, feature selection, model selection, fine-tuning, etc. Na fase de seleção de variáveis utilizei o método Boruta. Fiz cross-validation com diversos modelos e o XGBoost teve o melhor desempenho. Segui com o fine-tuning e no final realizei a previsão de vendas da time-series. Abaixo está a previsão final traduzida em desempenho de negócio.
 
 | ![](https://github.com/marcellohro-hub/Rossman_challange/blob/master/img/whole_scenario.JPG) | 
 |:--:| 
