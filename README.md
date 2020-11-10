@@ -31,4 +31,8 @@ Projeto desafio sobre [fraude de cartão de crédito](https://sejaumdatascientis
 * F1Score: 0.998764
 * KappaScore: 0.998762
 
+Este resultado traduz-se no seguinte resultado em desempenho de negócio:
+
+Com um total de transação de $229,409,295,522.24 por parte do cliente, O valor faturado da companhia seria de $555,956,368.86. Isso equivale a $0.24 faturado a cada $100,00 de transação do cliente.
+
 Mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
