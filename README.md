@@ -25,7 +25,15 @@ Este projeto foi muito bem recebido quando publiquei no linkedin, um colega da m
 
 # [Projeto 3](https://github.com/marcellohro-hub/Fraud_detection)
 
-Projeto desafio sobre [fraude de cartão de crédito](https://sejaumdatascientist.com/crie-uma-solucao-para-fraudes-em-transacoes-financeiras-usando-machine-learning/) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) do kaggle. Neste projeto pude testar várias técnicas de balanceamento e modelos de Machine Learning. Surpreendentemente não houve diferença significativa entre o resultado com os dados balanceados e não-balanceados. Em termos de acurácia obtive o seguinte resultado com o modelo final:
+Projeto desafio sobre [fraude de cartão de crédito](https://sejaumdatascientist.com/crie-uma-solucao-para-fraudes-em-transacoes-financeiras-usando-machine-learning/) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) do kaggle.
+
+Trata-se de uma empresa de detecção de fraude de cartão de crédito com a seguinte proposta ao seu cliente:
+
+1. A empresa vai **receber 25%** do valor de cada transação detectada verdadeiramente como fraude.
+2. A empresa vai **devolver 5%** do valor de cada transação detectada como fraude, porém a transação é verdadeiramente legítima.
+3. A empresa vai **devolver 100%** do valor para o cliente, a cada transação detectada como legítima, porém a transação é verdadeiramente uma fraude.
+
+Neste projeto pude testar várias técnicas de balanceamento e modelos de Machine Learning. Surpreendentemente não houve diferença significativa entre o resultado com os dados balanceados e não-balanceados. Em termos de acurácia obtive o seguinte resultado com o modelo final:
 
 * Balanced Accuracy: 0.998765
 * F1Score: 0.998764
