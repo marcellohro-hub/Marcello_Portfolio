@@ -1,7 +1,10 @@
 # Meu portólio de data science
 
 # [Projeto 1](https://github.com/marcellohro-hub/Rossman_challange)
-Este é o projeto final do curso [DS_em_produção](https://datascienceemproducao.kpages.online/como-ser-um-data-scientist?ref=Q40443728O&gclid=CjwKCAiAnIT9BRAmEiwANaoE1eyf2FNWx6xBsxDHqL6oIiIMX4y0Vthvov9dqodrmUdyJc2XvnkZDBoCcxQQAvD_BwE). Tem como objetivo simular um desafio real pedido por uma empresa. Para isso utilizei como base os dados da loja Rossmann do desafio [kaggle](https://www.kaggle.com/c/rossmann-store-sales). No final fiz o deploy do modelo no [Heroku](https://rossmann1-model.herokuapp.com/).
+Este projeto tem como objetivo simular um desafio real pedido por uma empresa. Para isso utilizei como base os [dados da loja Rossmann](https://www.kaggle.com/c/rossmann-store-sales) de um desafio kaggle. As principais estapas consistem em:
+* Analisar e levar insights sobre as vendas;
+* Usar algoritmo de ML capaz de prever as vendas das próximas 6 semanas;
+* Fazer [deploy](https://rossmann1-model.herokuapp.com/) do modelo de ML de forma que qualquer pessoa possa acessar as vendas das lojas.
 
 # [Projeto 2](https://github.com/marcellohro-hub/Linkedin_scraping-and-analysis)
 Este é um projeto de insight com o objetivo de analisar o mercado de engenharia mecânica (minha área original de formação). Fiz um web-scraping de 600 vagas de eng mecanica do linkedin, extraindo todos os textos das vagas (post, industry, applicants, description, etc). Com isso fiz análises estatísticas no pandas e utilizando a bilioteca spaCy de NLP. Pude extrair vários dados muito interessantes como por exemplo as habilidades com mais demanda:
