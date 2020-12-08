@@ -21,7 +21,7 @@ Este projeto foi muito bem recebido quando publiquei no linkedin, um colega da m
 
 # [Projeto 3](https://github.com/marcellohro-hub/Fraud_detection)
 
-Projeto desafio sobre [fraude de cartão de crédito](https://sejaumdatascientist.com/crie-uma-solucao-para-fraudes-em-transacoes-financeiras-usando-machine-learning/) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) do kaggle.
+Projeto desafio sobre [fraude de cartão de crédito](https://sejaumdatascientist.com/crie-uma-solucao-para-fraudes-em-transacoes-financeiras-usando-machine-learning/) da Comunidade DS. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) disponível na plataforma Kaggle.
 
 Trata-se de uma empresa de detecção de fraude de cartão de crédito com a seguinte proposta ao seu cliente:
 
@@ -40,3 +40,9 @@ Este resultado traduz-se no seguinte resultado em desempenho de negócio:
 Com um total de transação de $229,409,295,522.24 por parte do cliente, O valor faturado da companhia seria de $555,956,368.86. Isso equivale a $0.24 faturado a cada $100,00 de transação do cliente.
 
 Mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
+
+# [Projeto 4](https://gitlab.com/datascience-community/pa003_churn_predict/-/blob/pa003_marcello/churn.ipynb)
+
+Projeto desafio sobre churning da [Comunidade DS](https://sejaumdatascientist.com/predicao-de-churn/). O Objetivo deste projeto é classificar a probabilidade clientes entrarem em churn. Este projeto usa o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível na plataforma Kaggle.
+
+
