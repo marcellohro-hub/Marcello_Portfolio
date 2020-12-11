@@ -1,12 +1,16 @@
 # Meu portólio de data science
 
 # [Projeto 1](https://github.com/marcellohro-hub/Rossman_challange)
+**Tema: Regressão para previsão de vendas de uma time-series. Modelo final: XGBoost.**
+
 Este projeto tem como objetivo simular um pedido de previsão de vendas por uma empresa. Foi utilizado os [dados da loja Rossmann](https://www.kaggle.com/c/rossmann-store-sales) de um desafio kaggle. As principais estapas consistem em:
 * Analisar e levar insights sobre as vendas (efeito de promoções, feriados, distância ao concorrente, etc);
 * Usar algoritmo de regressão capaz de prever as vendas das próximas 6 semanas;
 * Fazer [deploy](https://rossmann1-model.herokuapp.com/) do modelo de ML de forma que qualquer pessoa possa acessar as vendas das lojas.
 
 # [Projeto 2](https://github.com/marcellohro-hub/Linkedin_scraping-and-analysis)
+**Tema: Insights sobre carreira. Principais técnicas utilizadas: Web-scraping e NLP.**
+
 Este é um projeto de insight com o objetivo de analisar o mercado de engenharia mecânica (minha área original de formação). Fiz um web-scraping de 600 vagas de eng mecanica do linkedin, extraindo todos os textos das vagas (post, industry, applicants, description, etc). Com isso fiz análises estatísticas no pandas e utilizando a bilioteca spaCy de NLP. Pude extrair vários dados muito interessantes como por exemplo as habilidades com mais demanda:
  
 | ![](https://github.com/marcellohro-hub/Linkedin_scraping-and-analysis/blob/master/img/habilidades.png) | 
@@ -20,6 +24,8 @@ Atualização:
 Este projeto foi muito bem recebido quando publiquei no linkedin, um colega da minha rede de conexões se interessou e propos desenvolver um [Guia de Profissões](http://tudosobrecarreira.com.br/guiadeprofissoes/) direcionado para alunos do Ensino Médio que ainda não decidiram o que fazer no vestibular.
 
 # [Projeto 3](https://github.com/marcellohro-hub/Fraud_detection)
+**Tema: Detecção de fraudes. Modelo final: random forest para classificação**
+
 Projeto que visa simular o modelo de negócio de uma empresa fictícia de combate a fraude de cartão de crédito. Este projeto usa o dataset [Synthetic Financial Datasets For Fraud Detection](https://www.kaggle.com/ntnu-testimon/paysim1) disponível na plataforma Kaggle.
 
 A empresa de detecção de fraude de cartão de crédito tem a seguinte proposta ao seu cliente:
@@ -41,5 +47,7 @@ Com um total de transação de $229,409,295,522.24 por parte do cliente, O valor
 Mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
 
 # [Projeto 4](https://gitlab.com/datascience-community/pa003_churn_predict/-/blob/pa003_marcello/churn.ipynb)
+**Tema: Previsão de evasão de clientes. Modelo final: redes neurais para classificação**
+
 Este projeto visa simular a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes. Essa evasão é chamada de **churn** nas métricas de negócio. Foi utilizado o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível no site de competições kaggle.
 
