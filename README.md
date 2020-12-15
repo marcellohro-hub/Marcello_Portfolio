@@ -46,8 +46,25 @@ Com um total de transação de $229,409,295,522.24 por parte do cliente, O valor
 
 Mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
 
-# [Projeto 4](https://gitlab.com/datascience-community/pa003_churn_predict/-/blob/pa003_marcello/churn.ipynb)
+# [Projeto 4](https://github.com/marcellohro-hub/Churn_prediction)
 **Tema: Previsão de evasão de clientes. Modelo final: redes neurais para classificação**
 
 Este projeto visa simular a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes. Essa evasão é chamada de **churn** nas métricas de negócio. Foi utilizado o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível no site de competições kaggle.
+
+Após testar vários modelos, escolhi redes neurais como modelo final. Utilizei um fine-tuning para calibrar o número de neurônios em cada cadamada, drop-out rate, batch-size e otimizador, obtendo o seguinte score final:
+
+* Recall: 0.72
+* Ballanced Accuracy: 0.77
+* F1 Score: 0.60
+* Kappa Score: 0.48
+
+Por fim, seguindo a proposta do desafio, arbitrei condições de incentivos para evitar a evasão de clientes. Esses incentivos são baseados na probabilidade de churning dada pelo modelo final para cada cliente:
+
+Para clientes com probabilidade de churning maior que 50%:
+* Investir 10% * retorno_do_cliente * probabilida_de_churning, com um teto de $10,000
+
+Para clientes com probabilidade de churning menor que 50%:
+* Investir valor igual ao retorno dado pelo cliente com um teto de $500,00
+
+Se esse investimento tiver 100% de eficácia, isto é, fizer com que mais nenhum cliente entre em churning, equivaleria a um ROI de $23,00 a cada $1,00 investido.
 
