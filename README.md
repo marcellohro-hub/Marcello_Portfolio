@@ -49,9 +49,9 @@ Mais informações sobre o desafio e o desempenho de negócio no read-me do proj
 # [Projeto 4](https://github.com/marcellohro-hub/Churn_prediction)
 **Tema: Previsão de evasão de clientes. Modelo final: redes neurais para classificação**
 
-Este projeto visa simular a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes. Essa evasão é chamada de **churn** nas métricas de negócio. Foi utilizado o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível no site de competições kaggle.
+Este projeto contêm a solução de um [caso de negócio](https://sejaumdatascientist.com/predicao-de-churn/) fictício que visa a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes (conhecido como **churning** na área de negócios). Foi utilizado o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível no site de competições kaggle.
 
-Após testar vários modelos, escolhi redes neurais como modelo final. Utilizei um fine-tuning para calibrar o número de neurônios em cada cadamada, drop-out rate, batch-size e otimizador, obtendo o seguinte score final:
+Após testar vários modelos, escolhi redes neurais como modelo final combinado com oversampling somote-tomek. Utilizei um fine-tuning para calibrar o número de neurônios em cada cadamada, o drop-out rate, o batch-size e o otimizador, obtendo o seguinte score final:
 
 * Recall: 0.72
 * Ballanced Accuracy: 0.77
