@@ -49,22 +49,26 @@ Mais informações sobre o desafio e o desempenho de negócio no read-me do proj
 # [Projeto 4](https://github.com/marcellohro-hub/Churn_prediction)
 **Tema: Previsão de evasão de clientes. Modelo final: redes neurais para classificação**
 
-Este projeto contêm a solução de um [caso de negócio](https://sejaumdatascientist.com/predicao-de-churn/) fictício que visa a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes (conhecido como **churning** na área de negócios). Foi utilizado o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível no site de competições kaggle.
+Este projeto contêm a solução de um [caso de negócio](https://sejaumdatascientist.com/predicao-de-churn/) fictício que visa a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes (conhecido como **churning** na área de negócios). 
+De acordo com o desafio proposto existe um orçamento de $10,000 para investir nos clientes e fazê-los mudar de ideia em relação ao cancelamento da assinatura. Esses incentivos devem ser utilizado de forma a otimizar o ROI (Retorno Sobre Investimento).
+Foi utilizado o dataset [ChurnDataset](https://www.kaggle.com/mervetorkan/churndataset) disponível no site de competições kaggle.
 
-Após testar vários modelos, escolhi redes neurais como modelo final combinado com oversampling somote-tomek. Utilizei um fine-tuning para calibrar o número de neurônios em cada cadamada, o drop-out rate, o batch-size e o otimizador, obtendo o seguinte score final:
+Após testar vários modelos, escolhi redes neurais como modelo final combinado com oversampling somote-tomek. Utilizei um fine-tuning para calibrar o número de neurônios em cada camada, o drop-out rate, o batch-size e o otimizador, obtendo o seguinte score final:
 
 * Recall: 0.72
 * Ballanced Accuracy: 0.77
 * F1 Score: 0.60
 * Kappa Score: 0.48
 
-Por fim, seguindo a proposta do desafio, arbitrei condições de incentivos para evitar a evasão de clientes. Esses incentivos são baseados na probabilidade de churning dada pelo modelo final para cada cliente:
+Por fim, criei uma estratégia para distribuir os incentivos:
+* Para clientes com probabilidade extrema de churning, p(churn)>0.99, não investir nada, esses clientes são muito difícies de manter e não vale a pena o investimento.
+* Se 0.95 < p(churn) < 0.99 investir $200
+* Se 0.90 < p(churn) < 0.95 investir $100
+* Se p(churn) < 0.90 investir $50
 
-Para clientes com probabilidade de churning maior que 50%:
-* Investir 10% * retorno_do_cliente * probabilida_de_churning, com um teto de $10,000
-
-Para clientes com probabilidade de churning menor que 50%:
-* Investir valor igual ao retorno dado pelo cliente com um teto de $500,00
-
-Se esse investimento tiver 100% de eficácia, isto é, fizer com que mais nenhum cliente entre em churning, equivaleria a um ROI de $23,00 a cada $1,00 investido.
-
+Esse é um problema de **otimização combinatória** de pesos (investimento em cada cliente) e valores (retorno de cada cliente), onde necessita-se maximizar o valor total (retorno total) e há uma restrição de peso total (orçamento de $10,000). Esse tipo de problema pode ser resolvido com o **algoritmo Knapsack**. Utilizando esse algoritmo obtive os seguintes resultados (supondo que a estratégia seja 100% eficaz):
+* Investimento: $10,000.00
+* Número de clientes selecionados:  184
+* Lucro: 3,881,663.21
+* Retorno ótimo dos clientes selecionados pelo algoritmo: 3,891,576.00
+* ROI ótimo: 38,816.63%
