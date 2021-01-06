@@ -47,7 +47,7 @@ Com um total de transação de $229,409,295,522.24 por parte do cliente, O valor
 Mais informações sobre o desafio e o desempenho de negócio no read-me do projeto.
 
 # [Projeto 4](https://github.com/marcellohro-hub/Churn_prediction)
-**Tema: Previsão de evasão de clientes. Modelo final: redes neurais para classificação**
+**Tema: Atração de clientes em Churn. Modelo final: redes neurais para classificação**
 
 Este projeto contêm a solução de um [caso de negócio](https://sejaumdatascientist.com/predicao-de-churn/) fictício que visa a produção de um plano de ações para uma empresa de serviços bancários sofrendo alta taxa de evasão de clientes (conhecido como **churning** na área de negócios). 
 De acordo com o desafio proposto existe um orçamento de $10,000 para investir nos clientes e fazê-los mudar de ideia em relação ao cancelamento da assinatura. Esses incentivos devem ser utilizado de forma a otimizar o ROI (Retorno Sobre Investimento).
